@@ -31,3 +31,20 @@ def call_convert(rlabel1,  inputn):
                             "Successfully converted to Celsius ")
     return
 
+# creating Tk window
+root = tk.Tk()
+ 
+# setting geometry of tk window
+root.geometry('300x150 + 600 + 200')
+ 
+# Using title() to display a message in the
+# dialogue box of the message in the title bar
+root.title('Temperature Converter')
+ 
+# Lay out widgets
+root.grid_columnconfigure(1, weight = 1)
+root.grid_rowconfigure(1, weight = 1)
+ 
+inputNumber = tk.StringVar()
+var = tk.StringVar()
+
