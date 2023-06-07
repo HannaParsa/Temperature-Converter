@@ -48,3 +48,29 @@ root.grid_rowconfigure(1, weight = 1)
 inputNumber = tk.StringVar()
 var = tk.StringVar()
 
+# label and entry field
+input_label = tk.Label(root, text ="Enter temperature")
+input_entry = tk.Entry(root, textvariable = inputNumber)
+input_label.grid(row = 1)
+input_entry.grid(row = 1, column = 1)
+result_label = tk.Label(root)
+result_label.grid(row = 3, columnspan = 4)
+ 
+# drop down setup
+dropDownList = ["Celsius", "Fahrenheit"]
+drop_down = tk.OptionMenu(root, var, *dropDownList,
+                          command = store_temp)
+var.set(dropDownList[0])
+drop_down.grid(row = 1, column = 2)
+ 
+# button widget
+call_convert = partial(call_convert, result_label,
+                       inputNumber)
+result_button = tk.Button(root, text ="Convert",
+                          command = call_convert)
+result_button.grid(row = 2, columnspan = 2)
+ 
+# infinite loop which is required to
+# run tkinter program infinitely
+# until an interrupt occurs
+root.mainloop()
