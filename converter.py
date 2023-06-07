@@ -35,7 +35,7 @@ def call_convert(rlabel1,  inputn):
 root = tk.Tk()
  
 # setting geometry of tk window
-root.geometry('300x150 + 600 + 200')
+#root.geometry('300x150 + 600 + 200')
  
 # Using title() to display a message in the
 # dialogue box of the message in the title bar
